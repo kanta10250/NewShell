@@ -7,13 +7,14 @@ int main() {
 
 	while(1) {
 		printf("tsh>");
-		flush(stdout);
+		fflush(stdout);
 
-		if(fgets(input, MAX_INPUT, stdin) === NULL) {
+		if(fgets(input, MAX_INPUT, stdin) == NULL) {
 			perror("fgets failed");
 			continue;
 		}
 		
+		printf("%s", input);
 	}
 	return 0;
 }
