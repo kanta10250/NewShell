@@ -45,7 +45,7 @@ int main() {
 		} else if(pid > 0){
 			int status;
 			waitpid(pid,  &status, 0);
-			printf("Exist status: %d\n, status");
+			printf("Exist status: %d\n", status);
 		} else {
 			perror("fork failed");
 		}
